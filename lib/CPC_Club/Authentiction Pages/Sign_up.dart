@@ -145,7 +145,7 @@ class _JobSeekerRegisterScreenState extends State<JobSeekerRegisterScreen> {
                 SizedBox(height: 20,),
 
                 Text(
-                  "Register as Job Seeker",
+                  "Register",
                   style:  TextStyle(
                     color: Color(0xff03438C),
                     fontSize: 25,

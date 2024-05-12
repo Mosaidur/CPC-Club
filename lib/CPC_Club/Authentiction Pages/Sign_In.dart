@@ -172,7 +172,7 @@ class _JobSeekerSigninScreenState extends State<JobSeekerSigninScreen> {
               SizedBox(height: 20,),
 
               Text(
-                "Login as A Job Seeker",
+                "Login",
                 style:  TextStyle(
                   color:  Color(0xff03438C),
                   fontSize: 25,

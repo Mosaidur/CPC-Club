@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:jobskeers/Job_Seeker/Authentiction%20Pages/Sign_In.dart';
 // import 'package:jobskeers/Job_Seeker/JobSeekerMainPage.dart';
-// import 'package:jobskeers/Job_Seeker/Pages/Home%20Page/JobSeekerHomePage.dart';
+// import 'package:jobskeers/Job_Seeker/Pages/Home%20Page/CPC_HomePage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'CPC_Club/JobSeekerMainPage.dart';
@@ -100,19 +100,19 @@ class _SplashScreenState extends State<SplashScreen> {
                     children: [
                       Image.asset(
                         // "assets/images/job-seeking.gif",
-                           "assets/images/job-search.png",
-                      width: 100,
+                           "assets/icons/CPC_Logo.png",
+                      width: 200,
                       ),
                       SizedBox(height: 15,),
-                      Text(
-                        "Seeker",
-                        style: TextStyle(
-                          color: Color(0xff3AB4FB),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 40,
-                          // color: darktheme? Colors.white: Colors.teal.shade400,
-                        ),
-                      ),
+                      // Text(
+                      //   "Seeker",
+                      //   style: TextStyle(
+                      //     color: Color(0xff3AB4FB),
+                      //     fontWeight: FontWeight.bold,
+                      //     fontSize: 40,
+                      //     // color: darktheme? Colors.white: Colors.teal.shade400,
+                      //   ),
+                      // ),
                     ],
                   )
                 ],
@@ -129,11 +129,12 @@ class _SplashScreenState extends State<SplashScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/images/cdc_logo.png",height: 80,),
-                Image.asset("assets/images/skilljobs_logo.png",height: 80,)
+                Image.asset("assets/icons/CSE_department.png",height: 90,),
+                SizedBox(width: 50,),
+                Image.asset("assets/images/Daffodil-International-University-DIU-logo.png",height: 50,)
               ],
             ),
-            Image.asset("assets/images/Daffodil-International-University-DIU-logo.png",height: 50,)
+            // Image.asset("assets/images/Daffodil-International-University-DIU-logo.png",height: 50,)
           ],
         ),
       ),

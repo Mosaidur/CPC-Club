@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:jobskeers/Job_Seeker/Pages/Home%20Page/JobSeekerHomePage.dart';
+// import 'package:jobskeers/Job_Seeker/Pages/Home%20Page/CPC_HomePage.dart';
 
 import 'Pages/ComingSoon.dart';
 import 'Pages/Event/event_page.dart';
-import 'Pages/Home Page/JobSeekerHomePage.dart';
+import 'Pages/Home Page/CPC_HomePage.dart';
 import 'Pages/Learning/LearningPage.dart';
 import 'Pages/More/moreFeature.dart';
 import 'Pages/My Job/My_jobsPage.dart';
@@ -28,7 +28,7 @@ class _JobSeekerMainpageState extends State<JobSeekerMainpage> {
       JobSeekerHomePage(),
       EventPage(),
       MoreFeature(),
-      MyJobPage(),
+      LearningPage(),
       JobSeekerProfilePage(),
     ];
 
@@ -57,7 +57,7 @@ class _JobSeekerMainpageState extends State<JobSeekerMainpage> {
                 BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
                 BottomNavigationBarItem(icon: Icon(Icons.event),label: "Event"),
                 BottomNavigationBarItem(icon: Icon(Icons.apps),label: "More"),
-                BottomNavigationBarItem(icon: Icon(Icons.work),label: "My Jobs"),
+                BottomNavigationBarItem(icon: Icon(Icons.work),label: "Bootcamp"),
                 BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
               ],
             ),
