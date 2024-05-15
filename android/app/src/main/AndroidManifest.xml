@@ -51,7 +51,7 @@
 
 
     <application
-        android:label="Jobs Skeers"
+        android:label="DIU CPC"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true"

@@ -89,32 +89,27 @@ class _SplashScreenState extends State<SplashScreen> {
      //    backgroundColor: Colors.white,
       body: Center(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(20,0,0,0),
+            padding: const EdgeInsets.fromLTRB(0,0,0,0),
             child: Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    //crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        // "assets/images/job-seeking.gif",
-                           "assets/icons/CPC_Logo.png",
-                      width: 200,
-                      ),
-                      SizedBox(height: 15,),
-                      // Text(
-                      //   "Seeker",
-                      //   style: TextStyle(
-                      //     color: Color(0xff3AB4FB),
-                      //     fontWeight: FontWeight.bold,
-                      //     fontSize: 40,
-                      //     // color: darktheme? Colors.white: Colors.teal.shade400,
-                      //   ),
-                      // ),
-                    ],
-                  )
+                  Image.asset(
+                    // "assets/images/job-seeking.gif",
+                       "assets/icons/CPC_Logo.png",
+                  width: 200,
+                  ),
+                  SizedBox(height: 15,),
+                  Text(
+                    textAlign: TextAlign.center,
+                    "Daffodil International University Computer and Programming Club",
+                    style: TextStyle(
+                      color: Colors.indigo.shade900,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      // color: darktheme? Colors.white: Colors.teal.shade400,
+                    ),
+                  ),
                 ],
               ),
             ),
