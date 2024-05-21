@@ -11,8 +11,8 @@ class Bootcamp extends StatelessWidget {
   const Bootcamp(
       {super.key,
         required this.imageUrl,
-    this.eventName, required
-    this.onTap,
+    this.eventName,
+    required this.onTap,
     this.registrationEndDate,
     this.ClassStartDate
       });
@@ -26,7 +26,7 @@ class Bootcamp extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: [
             BoxShadow(
-              color: Color(0xffcae6f1).withOpacity(0.4),
+              color: Color(0xffcae6f1).withOpacity(0.8),
               // color: Colors.transparent.withOpacity(0.1),
               spreadRadius: 2,
               blurRadius: 5,

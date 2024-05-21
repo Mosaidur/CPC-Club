@@ -16,6 +16,8 @@ import 'Widgets/ImageSlider.dart';
 import 'Widgets/Main_feature.dart';
 import '../Browse Jobs/BrowseJobsListPage.dart';
 import 'Widgets/ManuDrawer.dart';
+import 'Widgets/SemeCalenderInRow.dart';
+import 'Widgets/SpecialMessageInRow.dart';
 import 'Widgets/WingsInRow.dart';
 
 class JobSeekerHomePage extends StatefulWidget {
@@ -407,46 +409,7 @@ class _JobSeekerHomePageState extends State<JobSeekerHomePage> {
               ),
             ),
 
-            //Photo Gallery
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-              child: Container(
-                alignment: Alignment.centerLeft,
-                margin: EdgeInsets.symmetric(
-                  vertical: 15,
-                  horizontal: 20,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                    Text(
-                      "Photo Gallery",
-                      style: TextStyle(
-                        color: Color(0xff03438C),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                    ),
-
-                    InkWell(
-                      onTap: (){
-                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> BrowseJobslistPage()));
-                      },
-                      child: Text(
-                        "See All",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          //fontWeight: FontWeight.bold,
-                          fontSize: 13,
-                        ),
-                      ),
-                    ),
-
-                  ],
-                ),
-              ),
-            ),
+            SpecialMessageInRow(),
 
             //Semester Calender
             Padding(
@@ -488,6 +451,50 @@ class _JobSeekerHomePageState extends State<JobSeekerHomePage> {
                 ),
               ),
             ),
+
+            SemeCalenderInRow(),
+
+            //Photo Gallery
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                margin: EdgeInsets.symmetric(
+                  vertical: 15,
+                  horizontal: 20,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+
+                    Text(
+                      "Photo Gallery",
+                      style: TextStyle(
+                        color: Color(0xff03438C),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+
+                    InkWell(
+                      onTap: (){
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> BrowseJobslistPage()));
+                      },
+                      child: Text(
+                        "See All",
+                        style: TextStyle(
+                          color: Color(0xff03438C),
+                          //fontWeight: FontWeight.bold,
+                          fontSize: 13,
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
+              ),
+            ),
+
 
           ],
         ),

@@ -10,6 +10,7 @@ class FlagshipEventRow extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Container(
+        // color: Color(0xffcae6f1).withOpacity(0.4),
         // height: MediaQuery.of(context).size.height ,
         // height: 140 ,
         child: Padding(
