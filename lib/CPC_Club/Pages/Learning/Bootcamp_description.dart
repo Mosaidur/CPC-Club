@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Widgets/ShortDescription.dart';
 import 'Widgets/TextBoxWidget.dart';
 
 class BootcampDescription extends StatefulWidget {
@@ -46,6 +47,14 @@ class _BootcampDescriptionState extends State<BootcampDescription> {
               fit: BoxFit.fitWidth,
               // height: 60.0,
               width: MediaQuery.of(context).size.width,// Adjust as per your requirement
+            ),
+
+            ShortDescription(
+              courseTitle: 'Take Off Programming Contest, spring 2024',
+              ClassStartDate: "",
+              registrationEndDate: "",
+              RegistrationFee: "",
+              SocialMediaGroupLink: "https://www.dreamstime.com/people-person-digital-device-using-concept-close-up-studio-phot-photo-portrait-pretty-cute-attractive-lovely-lady-holding-smart-image127364744",
             ),
 
             TextBoxWidget(
