@@ -1,8 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../loading_page.dart';
+import '../Home Page/Widgets/Bootcamp.dart';
 import 'AboutEventPage.dart';
+import 'Event.dart';
 
 class EventPage extends StatefulWidget {
   bool backIcon;
@@ -20,7 +23,7 @@ class _EventPageState extends State<EventPage> {
       'Date': '10 May 2024',
       'Time': '5:00 pm',
       'Week': 'FRIDAY',
-      'EventImage': 'assets/images/event Cover page .jpg',
+      'EventImage': 'https://img.freepik.com/free-photo/face-young-selfie-sweater-hipster_1157-4036.jpg',
       'EventTitle': 'Event Title',
       'EventLocation': 'Event Location',
       'EventFaceBookLink' : 'https://www.facebook.com/share/qumFHw8a7qtYXcmj/?mibextid=9VsGKo',
@@ -30,7 +33,7 @@ class _EventPageState extends State<EventPage> {
       'Date': '11 May 2024',
       'Time': '4:00 pm',
       'Week': 'SaturnDAY',
-      'EventImage': 'assets/images/event Cover page .jpg',
+      'EventImage': 'https://thumbs.dreamstime.com/b/long-road-2232078.jpg',
       'EventTitle': 'Event Title',
       'EventLocation': 'Event Location',
       'EventFaceBookLink' : 'https://www.facebook.com/share/qumFHw8a7qtYXcmj/?mibextid=9VsGKo',
@@ -77,109 +80,126 @@ class _EventPageState extends State<EventPage> {
 
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
 
             children: eventDetails.map((event) {
 
-              return Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: InkWell( onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> AboutEventPage(eventID: event['EventID'],) ));
-                },
+              return Column(
+                children: [
+                  EventData (
+                    eventName: 'Research Talk',
+                    location: event['EventLocation']!.toString(),
+                    date: "${event['Week'].toString()}, ${event['Date'].toString()} AT ${event['Time'].toString()}",
+                    imageUrl: event['EventImage']!,
+                    onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> AboutEventPage(eventID: event['EventID'],) ));
+                  },),
 
-                  child: Container(
-                    color: Colors.white,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(20.0),
-                              topLeft: Radius.circular(20.0),
-                            ),
-                          ),
-                          child: AspectRatio(
-                            aspectRatio: 19 / 9,
-                            child: Image.asset(
-                              event['EventImage']!,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 5, 15, 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "${event['Week'].toString()}, ${event['Date'].toString()} AT ${event['Time'].toString()}",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 14,
-                                ),
-                              ),
-                              SizedBox(height: 10),
-
-                              //Event Title
-                              Text(
-                                event['EventTitle']!.toString(),
-                                softWrap: true,
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 1,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-
-                              SizedBox(height: 10),
-
-                              //Event Location
-                              Text(
-                                event['EventLocation']!.toString(),
-                                softWrap: true,
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 1,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                  color: Colors.grey.shade700,
-                                ),
-                              ),
-
-                              SizedBox(height: 5,),
-
-                              Center(
-                                child: ElevatedButton(
-                                    onPressed: ()async {
-
-                                      final url = Uri.parse(event['EventFaceBookLink']);
-                                      LoadingPage();
-                                      if (await launchUrl(
-                                        url,
-                                        mode: LaunchMode.externalApplication,
-                                      )) {
-                                        throw Exception('Could not launch $url');
-                                      }
-
-                                    },
-
-                                    child: Text("Interested")
-                                ),
-                              ),
-
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                  SizedBox(height: 20,)
+                ],
               );
+
+
+
+              // return Padding(
+              //   padding: const EdgeInsets.all(10.0),
+              //   child: InkWell( onTap: (){
+              //     Navigator.push(context, MaterialPageRoute(builder: (context)=> AboutEventPage(eventID: event['EventID'],) ));
+              //   },
+              //
+              //     child: Container(
+              //       color: Colors.white,
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Container(
+              //             decoration: BoxDecoration(
+              //               borderRadius: BorderRadius.only(
+              //                 topRight: Radius.circular(20.0),
+              //                 topLeft: Radius.circular(20.0),
+              //               ),
+              //             ),
+              //             child: AspectRatio(
+              //               aspectRatio: 19 / 9,
+              //               child: Image.asset(
+              //                 event['EventImage']!,
+              //                 fit: BoxFit.fill,
+              //               ),
+              //             ),
+              //           ),
+              //           SizedBox(height: 10),
+              //           Padding(
+              //             padding: const EdgeInsets.fromLTRB(20, 5, 15, 10),
+              //             child: Column(
+              //               crossAxisAlignment: CrossAxisAlignment.start,
+              //               children: [
+              //                 Text(
+              //                   "${event['Week'].toString()}, ${event['Date'].toString()} AT ${event['Time'].toString()}",
+              //                   style: TextStyle(
+              //                     fontWeight: FontWeight.bold,
+              //                     fontSize: 14,
+              //                   ),
+              //                 ),
+              //                 SizedBox(height: 10),
+              //
+              //                 //Event Title
+              //                 Text(
+              //                   event['EventTitle']!.toString(),
+              //                   softWrap: true,
+              //                   overflow: TextOverflow.ellipsis,
+              //                   maxLines: 1,
+              //                   style: TextStyle(
+              //                     fontWeight: FontWeight.bold,
+              //                     fontSize: 18,
+              //                   ),
+              //                 ),
+              //
+              //                 SizedBox(height: 10),
+              //
+              //                 //Event Location
+              //                 Text(
+              //                   event['EventLocation']!.toString(),
+              //                   softWrap: true,
+              //                   overflow: TextOverflow.ellipsis,
+              //                   maxLines: 1,
+              //                   style: TextStyle(
+              //                     fontWeight: FontWeight.bold,
+              //                     fontSize: 18,
+              //                     color: Colors.grey.shade700,
+              //                   ),
+              //                 ),
+              //
+              //                 SizedBox(height: 5,),
+              //
+              //                 Center(
+              //                   child: ElevatedButton(
+              //                       onPressed: ()async {
+              //
+              //                         final url = Uri.parse(event['EventFaceBookLink']);
+              //                         LoadingPage();
+              //                         if (await launchUrl(
+              //                           url,
+              //                           mode: LaunchMode.externalApplication,
+              //                         )) {
+              //                           throw Exception('Could not launch $url');
+              //                         }
+              //
+              //                       },
+              //
+              //                       child: Text("Interested")
+              //                   ),
+              //                 ),
+              //
+              //               ],
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // );
             }).toList(),
           ),
         ),

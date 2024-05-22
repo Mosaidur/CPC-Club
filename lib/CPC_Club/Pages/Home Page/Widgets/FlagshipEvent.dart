@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class FlagshipEvent extends StatelessWidget {
-  final String imageUrl;
+  final String? imageUrl;
   final String? eventName;
   final VoidCallback onTap;
 
   FlagshipEvent({
-    required this.imageUrl,
+    this.imageUrl,
     this.eventName,
     required this.onTap,
   });
@@ -31,8 +31,10 @@ class FlagshipEvent extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.0),
           child: Column(
             children: [
+
+              (imageUrl == null)? Container():
               Image.network(
-                imageUrl,
+                imageUrl!,
                 fit: BoxFit.fitWidth,
                 height: 50.0, // Adjust as per your requirement
               ),

@@ -17,7 +17,8 @@ class Course_widget extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 15.0, left: 25,right: 5 ,bottom: 10),      child: InkWell(
+      padding: const EdgeInsets.only(top: 15.0, left: 25,right: 5 ,bottom: 10),
+      child: InkWell(
         onTap: (){},
         child: Container(
           // width: double.maxFinite,
@@ -30,93 +31,111 @@ class Course_widget extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(top: 15.0, left: 20,right: 20,bottom: 20),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
-                //Image
-                Container(
-                  width: MediaQuery.of(context).size.width/2.5,
-                  child: Image.asset(SugImagePath, fit: BoxFit.fill,),
+                (SugImagePath.contains("assets/"))?
+                Image.asset(
+                  SugImagePath,
+                  fit: BoxFit.fitWidth,
+                  // height: 60.0,
+                  width: MediaQuery.of(context).size.width/2.5,// Adjust as per your requirement
+                ) :
+                Image.network(
+                  SugImagePath,
+                  fit: BoxFit.fitWidth,
+                  // height: 60.0,
+                  width: MediaQuery.of(context).size.width/2.5,// Adjust as per your requirement
                 ),
-
-                SizedBox(
-                  height: 10,
-                ),
-
-                // title
-                Text(
-                  Sugtitle,
-                  softWrap: true,
-                  maxLines: 4,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-
-                SizedBox(height: 10,),
-
-                // course Conduct Location
-                Row(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                    Icon(Icons.location_on,color: Color(0xff03438C),size: 12,),
+                    // //Image
+                    // Container(
+                    //   width: MediaQuery.of(context).size.width/2.5,
+                    //   child: Image.asset(SugImagePath, fit: BoxFit.fill,),
+                    // ),
 
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
 
-                    Container(
-                      width: MediaQuery.of(context).size.width/4.1,
-                      child: Text(
-                        SugcourseConductLocation,
-                        softWrap: true,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        ),
+                    // title
+                    Text(
+                      Sugtitle,
+                      softWrap: true,
+                      maxLines: 4,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
                       ),
+                    ),
+
+                    SizedBox(height: 10,),
+
+                    // course Conduct Location
+                    Row(
+                      children: [
+
+                        Icon(Icons.location_on,color: Color(0xff03438C),size: 12,),
+
+                        SizedBox(width: 10,),
+
+                        Container(
+                          width: MediaQuery.of(context).size.width/4.1,
+                          child: Text(
+                            SugcourseConductLocation,
+                            softWrap: true,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+
+
+                      ],
+                    ),
+
+                    SizedBox(height: 10,),
+
+                    // Session Starting Time
+                    Row(
+                      children: [
+
+                        Icon(Icons.calendar_month,color: Color(0xff03438C),size: 12,),
+
+                        SizedBox(width: 10,),
+
+                        Container(
+                          width: MediaQuery.of(context).size.width/4.1,
+                          child: Text(
+                            SugSessionStarting,
+                            softWrap: true,
+                            maxLines: 4,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+
+
+                      ],
                     ),
 
 
                   ],
+
                 ),
-
-                SizedBox(height: 10,),
-
-                // Session Starting Time
-                Row(
-                  children: [
-
-                    Icon(Icons.calendar_month,color: Color(0xff03438C),size: 12,),
-
-                    SizedBox(width: 10,),
-
-                    Container(
-                      width: MediaQuery.of(context).size.width/4.1,
-                      child: Text(
-                        SugSessionStarting,
-                        softWrap: true,
-                        maxLines: 4,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-
-
-                  ],
-                ),
-
-
               ],
-
             ),
           ),
         ),

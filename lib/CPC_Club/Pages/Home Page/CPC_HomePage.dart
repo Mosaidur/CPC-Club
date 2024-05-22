@@ -16,6 +16,7 @@ import 'Widgets/ImageSlider.dart';
 import 'Widgets/Main_feature.dart';
 import '../Browse Jobs/BrowseJobsListPage.dart';
 import 'Widgets/ManuDrawer.dart';
+import 'Widgets/PhotosInColumn.dart';
 import 'Widgets/SemeCalenderInRow.dart';
 import 'Widgets/SpecialMessageInRow.dart';
 import 'Widgets/WingsInRow.dart';
@@ -494,6 +495,8 @@ class _JobSeekerHomePageState extends State<JobSeekerHomePage> {
                 ),
               ),
             ),
+
+            PhotosInColumn(),
 
 
           ],

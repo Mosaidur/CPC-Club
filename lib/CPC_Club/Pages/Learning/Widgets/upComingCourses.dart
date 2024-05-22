@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../Home Page/Widgets/Bootcamp.dart';
+import '../Bootcamp_description.dart';
 import 'Course_widget.dart';
 
 class UpComingCourse extends StatelessWidget {
@@ -28,7 +30,7 @@ class UpComingCourse extends StatelessWidget {
         children: [
 
 
-          // Suggested Courses
+          // Enrolled Bootcamp
           Container(
             alignment: AlignmentDirectional.topStart,
             padding: const EdgeInsets.only(top: 10.0, left: 20,right: 10,bottom: 10),
@@ -49,11 +51,35 @@ class UpComingCourse extends StatelessWidget {
                 for(int i=0; i<10;i++)
 
                   //Enrolled Bootcamp
-                  Course_widget(
-                    SugImagePath: SugImagePath ,
-                    Sugtitle: Sugtitle,
-                    SugcourseConductLocation: SugcourseConductLocation,
-                    SugSessionStarting: SugSessionStarting,),
+                  Stack(
+                    children: [
+                      Bootcamp(
+                      imageUrl: 'https://uploads.toph.co/Nb1jDSdfZA3Eksj_iouiyPHorFPfCCp1Jhh-ibpCllo/resize:fill:1400:500:0/gravity:sm/czM6Ly90b3BoLXBsYXRmb3JtLXVwbG9hZHMvaW1hZ2VzLzE2Njg2NzEwMjM4OTkxNDkxODQtNjY0NjUyOTQ1MDU5MzcwNDEzMC1kZmM3Y2RiNWU4ZjBmMTAyOTE2MTBkZTA1M2Q5OGQwZi5qcGc',
+                      eventName: "Take Off Programming Contset Spring 2024",
+                      // registrationEndDate: "10-05-2024",
+                      // ClassStartDate: "01-06-2024",
+                      onTap: () {  },),
+
+                      Positioned(
+                        top: 12,
+                        right: -5,
+                        child: Transform.rotate(
+                          angle: 45 * 3.1415927 / 180,
+                          child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                            color: Colors.green.withOpacity(0.5),
+                            child: Text(
+                              'Enrolled',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]
+                  )
               ],
             ),
           ),
@@ -78,23 +104,32 @@ class UpComingCourse extends StatelessWidget {
           Row(
             children: [
 
-              //UnEnrolled Bootcamp
-              Course_widget(
-                SugImagePath: SugImagePath ,
-                Sugtitle: Sugtitle,
-                SugcourseConductLocation: SugcourseConductLocation,
-                SugSessionStarting: SugSessionStarting,),
+              SizedBox(width: 15,),
 
               //UnEnrolled Bootcamp
-              Course_widget(
-                SugImagePath: SugImagePath ,
-                Sugtitle: Sugtitle,
-                SugcourseConductLocation: SugcourseConductLocation,
-                SugSessionStarting: SugSessionStarting,),
+              Bootcamp(
+                imageUrl: 'https://uploads.toph.co/Nb1jDSdfZA3Eksj_iouiyPHorFPfCCp1Jhh-ibpCllo/resize:fill:1400:500:0/gravity:sm/czM6Ly90b3BoLXBsYXRmb3JtLXVwbG9hZHMvaW1hZ2VzLzE2Njg2NzEwMjM4OTkxNDkxODQtNjY0NjUyOTQ1MDU5MzcwNDEzMC1kZmM3Y2RiNWU4ZjBmMTAyOTE2MTBkZTA1M2Q5OGQwZi5qcGc',
+                eventName: "Take Off Programming Contset Spring 2024",
+                registrationEndDate: "10-05-2024",
+                ClassStartDate: "01-06-2024",
+                onTap: () {  },),
 
+              SizedBox(width: 15,),
+
+              //UnEnrolled Bootcamp
+              Bootcamp(
+                imageUrl: 'https://uploads.toph.co/Nb1jDSdfZA3Eksj_iouiyPHorFPfCCp1Jhh-ibpCllo/resize:fill:1400:500:0/gravity:sm/czM6Ly90b3BoLXBsYXRmb3JtLXVwbG9hZHMvaW1hZ2VzLzE2Njg2NzEwMjM4OTkxNDkxODQtNjY0NjUyOTQ1MDU5MzcwNDEzMC1kZmM3Y2RiNWU4ZjBmMTAyOTE2MTBkZTA1M2Q5OGQwZi5qcGc',
+                eventName: "Take Off Programming Contset Spring 2024",
+                registrationEndDate: "10-05-2024",
+                ClassStartDate: "01-06-2024",
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> BootcampDescription() ));
+                },),
 
             ],
           ),
+
+          SizedBox(height: 20,),
 
 
         ],
