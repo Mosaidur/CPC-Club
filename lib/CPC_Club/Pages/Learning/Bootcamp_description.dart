@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Bootcamp_registration.dart';
 import 'Widgets/ShortDescription.dart';
 import 'Widgets/TextBoxWidget.dart';
 
@@ -79,7 +80,9 @@ class _BootcampDescriptionState extends State<BootcampDescription> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(18.0),
         child: ElevatedButton(
-          onPressed: () {  },
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> BootcampRegistration() ));
+          },
 
           child: Text("Registration Now"),),
       ),

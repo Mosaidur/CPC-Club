@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-import 'SemesterCalender.dart';
-
-class SemeCalenderInRow extends StatelessWidget {
-  const SemeCalenderInRow({super.key});
+class HiringCategoryInRow extends StatelessWidget {
+  const HiringCategoryInRow({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +19,39 @@ class SemeCalenderInRow extends StatelessWidget {
 
               SizedBox(width: 10,),
 
-              SemeCalender(imageUrl: 'https://thumbs.dreamstime.com/b/long-road-2232078.jpg',),
-
-              SizedBox(width: 10,),
-
-              SemeCalender(imageUrl: 'https://thumbs.dreamstime.com/b/long-road-2232078.jpg',),
-
-              SizedBox(width: 10,),
-
-              SemeCalender(imageUrl: 'https://thumbs.dreamstime.com/b/long-road-2232078.jpg',),
+              //Private Job logo and text
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: Image.asset("assets/icons_2/Private Job.png"),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "Private",
+                      style: TextStyle(
+                        color: Color(0xff03438C),
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "Job",
+                      style: TextStyle(
+                        color: Color(0xff03438C),
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
             ],
           ),

@@ -33,7 +33,7 @@ class SemeCalender extends StatelessWidget {
                 Image.network(
                   imageUrl,
                   fit: BoxFit.cover,
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width / 3,
                 ),
 
               ],

@@ -301,11 +301,11 @@ class _JobSeekerSigninScreenState extends State<JobSeekerSigninScreen> {
                                 minimumSize: Size(double.infinity, 50)
                             ),
 
-                            onPressed: _submit,
+                            // onPressed: _submit,
 
-                            // onPressed: ()=> Navigator.push(
-                            //     context, MaterialPageRoute(
-                            //     builder: (context) => JobSeekerMainpage())) ,
+                            onPressed: ()=> Navigator.push(
+                                context, MaterialPageRoute(
+                                builder: (context) => JobSeekerMainpage())) ,
 
                             child: Text(
                               "Login",

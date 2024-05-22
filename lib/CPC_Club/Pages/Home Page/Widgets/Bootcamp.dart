@@ -11,8 +11,8 @@ class Bootcamp extends StatelessWidget {
   const Bootcamp(
       {super.key,
         required this.imageUrl,
-    this.eventName,
-    required this.onTap,
+    this.eventName, required
+    this.onTap,
     this.registrationEndDate,
     this.ClassStartDate
       });
@@ -26,8 +26,8 @@ class Bootcamp extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: [
             BoxShadow(
-              color: Color(0xffcae6f1).withOpacity(0.2),
-              // color: Colors.transparent.withOpacity(0.2),
+              color: Color(0xffcae6f1).withOpacity(0.4),
+              // color: Colors.transparent.withOpacity(0.1),
               spreadRadius: 2,
               blurRadius: 5,
               offset: Offset(0, 3),
@@ -38,14 +38,6 @@ class Bootcamp extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.0),
           child: Column(
             children: [
-
-              (imageUrl.contains("assets/"))?
-              Image.asset(
-                imageUrl,
-                fit: BoxFit.fitWidth,
-                // height: 60.0,
-                width: MediaQuery.of(context).size.width/2.5,// Adjust as per your requirement
-              ) :
               Image.network(
                 imageUrl,
                 fit: BoxFit.fitWidth,
@@ -78,63 +70,6 @@ class Bootcamp extends StatelessWidget {
                     ),
                   ),
                 ),
-
-              if (registrationEndDate != null)
-                Container(
-                  padding: EdgeInsets.all(5.0),
-                  // decoration: BoxDecoration(
-                  //   color: Colors.transparent.withOpacity(0.1),
-                  //   borderRadius: BorderRadius.only(
-                  //     bottomLeft: Radius.circular(10.0),
-                  //     bottomRight: Radius.circular(10.0),
-                  //   ),
-                  // ),
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width/2.5,
-                    child: Text(
-                      "Registration End: ${registrationEndDate!}",
-                      maxLines: 2,
-                      softWrap: true,
-                      overflow: TextOverflow.visible,
-                      style: TextStyle(
-                        color: Color(0xff0c3560),
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-
-              if (ClassStartDate != null)
-                Container(
-                  padding: EdgeInsets.all(5.0),
-                  // decoration: BoxDecoration(
-                  //   color: Colors.transparent.withOpacity(0.1),
-                  //   borderRadius: BorderRadius.only(
-                  //     bottomLeft: Radius.circular(10.0),
-                  //     bottomRight: Radius.circular(10.0),
-                  //   ),
-                  // ),
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width/2.5,
-                    child: Text(
-                      "Class Start: ${ClassStartDate!}",
-                      maxLines: 2,
-                      softWrap: true,
-                      overflow: TextOverflow.visible,
-                      style: TextStyle(
-                        color: Color(0xff0c3560),
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-
-              SizedBox(height: 20,)
-
             ],
           ),
         ),
