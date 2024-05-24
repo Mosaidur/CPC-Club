@@ -1,21 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Widgets/ProgramCard.dart';
-import 'Widgets/UpcommingEventList.dart';
+import 'Widgets/AddInfo.dart';
+import 'Widgets/ViewInfo.dart';
 
-class FlagshipEventList extends StatefulWidget {
-  final String? appbarname;
-  const FlagshipEventList({super.key, this.appbarname});
+class CommitteeAndAlumniInformatio extends StatefulWidget {
+  const CommitteeAndAlumniInformatio({super.key});
 
   @override
-  State<FlagshipEventList> createState() => _FlagshipEventListState();
+  State<CommitteeAndAlumniInformatio> createState() => _CommitteeAndAlumniInformatioState();
 }
 
-class _FlagshipEventListState extends State<FlagshipEventList> {
+class _CommitteeAndAlumniInformatioState extends State<CommitteeAndAlumniInformatio> {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+    return  DefaultTabController(
       length: 3, // Number of tabs
       child: Scaffold(
         appBar: AppBar(
@@ -27,20 +26,18 @@ class _FlagshipEventListState extends State<FlagshipEventList> {
           ) ,
           // leadingWidth: 0,
           automaticallyImplyLeading: false,
-          title: Text(widget.appbarname!),
+          title: Text("Committee And Alumni Information"),
           bottom: TabBar(
             tabs: [
-              Tab(text: 'All'),
-              Tab(text: '2024'),
-              Tab(text: '2023'),
+              Tab(text: 'View info'),
+              Tab(text: 'Add info'),
             ],
           ),
         ),
         body: TabBarView(
           children: [
-            UpcommingEventList(),
-            UpcommingEventList(),
-            UpcommingEventList(),
+            ViewCommitteeAlumniInfo(),
+            AddCommitteeAmulniInfo(),
           ],
         ),
       ),

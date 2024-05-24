@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Admin/Pages/Hompage/AdminHompage.dart';
 import 'CPC_Club/Authentiction Pages/Sign_In.dart';
 // import 'package:jobskeers/Job_Seeker/Authentiction%20Pages/Sign_In.dart';
 
@@ -15,7 +16,7 @@ class _SelectLoginScreenState extends State<SelectLoginScreen > {
 
   final List<Widget> pages = [
     JobSeekerSigninScreen(),
-    Container(child: Text("Container 2")),
+    AdminHomePage(),
   ];
 
   @override
@@ -43,8 +44,8 @@ class _SelectLoginScreenState extends State<SelectLoginScreen > {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  buildNavItem(0, "I'm Job Seeker"),
-                  buildNavItem(1, "I'm Employer"),
+                  buildNavItem(0, "CPC Members"),
+                  buildNavItem(1, "Admin"),
                 ],
               ),
             ),
