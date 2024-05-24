@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../Alumni Cell/AlumniCellList.dart';
+import '../../../Alumni Cell/widgets/AllAlumniInformation.dart';
+import '../../Committe/Widgets/allCommitteeInformation.dart';
+import '../../Committe/committeDetailsPage.dart';
 import '../../Event/event_page.dart';
 import '../../Groups/AllGroupPage.dart';
 
@@ -25,49 +29,15 @@ class _OthersFeaturesState extends State<OthersFeatures> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
 
-                //Online Job Fair logo and text
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        child: Image.asset("assets/Images2/Online Job Fair.png"),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Online",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        "Job Fair",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                //Events logo and text
+                //Committee Information
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => EventPage(backIcon: true)));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => CommiteeDetailsPage()));
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -75,13 +45,13 @@ class _OthersFeaturesState extends State<OthersFeatures> {
                         Container(
                           height: 40,
                           width: 40,
-                          child: Image.asset("assets/Images2/Events.png"),
+                          child: Image.asset("assets/Images2/Committee.png"),
                         ),
                         SizedBox(
                           height: 5,
                         ),
                         Text(
-                          "Events",
+                          "Committee \nInformation",
                           style: TextStyle(
                             color: Color(0xff03438C),
                             fontSize: 15,
@@ -101,12 +71,12 @@ class _OthersFeaturesState extends State<OthersFeatures> {
                   ),
                 ),
 
-                //Groups logo and text
+                //Alumni Cell
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => AllGroupPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => AlumniCellList()));
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -114,13 +84,13 @@ class _OthersFeaturesState extends State<OthersFeatures> {
                         Container(
                           height: 40,
                           width: 40,
-                          child: Image.asset("assets/Images2/Groups.png"),
+                          child: Image.asset("assets/Images2/Alumni.png"),
                         ),
                         SizedBox(
                           height: 5,
                         ),
                         Text(
-                          "Groups",
+                          "Alumni Cell\n",
                           style: TextStyle(
                             color: Color(0xff03438C),
                             fontSize: 15,
@@ -140,39 +110,6 @@ class _OthersFeaturesState extends State<OthersFeatures> {
                   ),
                 ),
 
-                //chat  logo and text
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        child: Image.asset("assets/Images2/Chat.png"),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Chat",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        " ",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
 
               ],
             ),

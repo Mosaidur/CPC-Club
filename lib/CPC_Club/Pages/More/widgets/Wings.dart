@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
-class Invitation extends StatefulWidget {
-  const Invitation({super.key});
+class WingsList extends StatefulWidget {
+  const WingsList({super.key});
 
   @override
-  State<Invitation> createState() => _InvitationState();
+  State<WingsList> createState() => _WingsList();
 }
 
-class _InvitationState extends State<Invitation> {
+class _WingsList extends State<WingsList> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,7 +24,7 @@ class _InvitationState extends State<Invitation> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
 
-                //Online Interview logo and text
+                //ACM Task Force
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -33,13 +33,13 @@ class _InvitationState extends State<Invitation> {
                       Container(
                         height: 40,
                         width: 40,
-                        child: Image.asset("assets/Images2/online-interview.png"),
+                        child: Image.asset("assets/icons/CPC_ACM.png"),
                       ),
                       SizedBox(
                         height: 5,
                       ),
                       Text(
-                        "Online",
+                        "ACM Task ",
                         style: TextStyle(
                           color: Color(0xff03438C),
                           fontSize: 15,
@@ -47,7 +47,7 @@ class _InvitationState extends State<Invitation> {
                         ),
                       ),
                       Text(
-                        "Interview",
+                        "Force",
                         style: TextStyle(
                           color: Color(0xff03438C),
                           fontSize: 15,
@@ -58,7 +58,7 @@ class _InvitationState extends State<Invitation> {
                   ),
                 ),
 
-                //Online Test logo and text
+                //Development
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -67,13 +67,13 @@ class _InvitationState extends State<Invitation> {
                       Container(
                         height: 40,
                         width: 40,
-                        child: Image.asset("assets/Images2/online-test.png"),
+                        child: Image.asset("assets/icons/CPC_Development.png"),
                       ),
                       SizedBox(
                         height: 5,
                       ),
                       Text(
-                        "Online",
+                        "Development",
                         style: TextStyle(
                           color: Color(0xff03438C),
                           fontSize: 15,
@@ -81,7 +81,7 @@ class _InvitationState extends State<Invitation> {
                         ),
                       ),
                       Text(
-                        "Test",
+                        "Wing",
                         style: TextStyle(
                           color: Color(0xff03438C),
                           fontSize: 15,
@@ -92,7 +92,7 @@ class _InvitationState extends State<Invitation> {
                   ),
                 ),
 
-                //On Board Interview logo and text
+                //Research & Journal
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -101,13 +101,13 @@ class _InvitationState extends State<Invitation> {
                       Container(
                         height: 40,
                         width: 40,
-                        child: Image.asset("assets/Images2/On Board Interview.png"),
+                        child: Image.asset("assets/icons/CPC_Research.png"),
                       ),
                       SizedBox(
                         height: 5,
                       ),
                       Text(
-                        "On Board",
+                        "Research & ",
                         style: TextStyle(
                           color: Color(0xff03438C),
                           fontSize: 15,
@@ -115,7 +115,7 @@ class _InvitationState extends State<Invitation> {
                         ),
                       ),
                       Text(
-                        "Interview",
+                        "Journal",
                         style: TextStyle(
                           color: Color(0xff03438C),
                           fontSize: 15,
@@ -126,7 +126,7 @@ class _InvitationState extends State<Invitation> {
                   ),
                 ),
 
-                //Shortlisted Job  logo and text
+                //JCIC
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -141,7 +141,7 @@ class _InvitationState extends State<Invitation> {
                         height: 5,
                       ),
                       Text(
-                        "Shortlisted",
+                        "JCIC",
                         style: TextStyle(
                           color: Color(0xff03438C),
                           fontSize: 15,
@@ -149,7 +149,7 @@ class _InvitationState extends State<Invitation> {
                         ),
                       ),
                       Text(
-                        "Job",
+                        " ",
                         style: TextStyle(
                           color: Color(0xff03438C),
                           fontSize: 15,

@@ -6,7 +6,18 @@ import 'Widgets/ShortDescription.dart';
 import 'Widgets/TextBoxWidget.dart';
 
 class BootcampDescription extends StatefulWidget {
-  const BootcampDescription({super.key});
+  final String? imageUrl;
+  final String? appBar;
+  final String? CourseDescription;
+  final String? PaymentProccess;
+  final String? PaymentTermsAndCondition;
+  const BootcampDescription({super.key,
+    this.imageUrl,
+    this.appBar,
+    this.CourseDescription,
+    this.PaymentProccess,
+    this.PaymentTermsAndCondition
+  });
 
   @override
   State<BootcampDescription> createState() => _BootcampDescriptionState();
@@ -59,18 +70,18 @@ class _BootcampDescriptionState extends State<BootcampDescription> {
             ),
 
             TextBoxWidget(
-              title: "asfkh\nsalfhasl\nkfsah",
+              title: "Description",
               text: '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n',
             ),
 
             TextBoxWidget(
-              title: "asfkh\nsalfhasl\nkfsah",
-              text: '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n',
+              title: "Payment Process",
+              text: ' ',
             ),
 
             TextBoxWidget(
-              title: "asfkh\nsalfhasl\nkfsah",
-              text: '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n',
+              title: "Term & Condition",
+              text: ' ',
             )
 
           ],

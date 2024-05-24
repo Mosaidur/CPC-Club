@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../../Select_LogInScreen.dart';
 import '../../Authentiction Pages/Sign_In.dart';
 import '../../CustomSnackbar.dart';
+import '../Committe/committeDetailsPage.dart';
 import '../Profile/Account Settings/upload_photo.dart';
 import 'Widgets/AdvisorStudentPanel.dart';
 import 'Widgets/BootcampInRow.dart';
@@ -350,7 +351,7 @@ class _JobSeekerHomePageState extends State<JobSeekerHomePage> {
 
                     InkWell(
                       onTap: (){
-                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> BrowseJobslistPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> CommiteeDetailsPage()));
                       },
                       child: Text(
                         "See All",

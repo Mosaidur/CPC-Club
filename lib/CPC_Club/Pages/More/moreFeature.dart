@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:jobskeers/CPC_Club/Pages/More/widgets/AISupport.dart';
+import 'package:jobskeers/CPC_Club/Pages/More/widgets/FagshipEvent.dart';
 import 'package:jobskeers/CPC_Club/Pages/More/widgets/AboutUS.dart';
 import 'package:jobskeers/CPC_Club/Pages/More/widgets/OtherFrature.dart';
-import 'package:jobskeers/CPC_Club/Pages/More/widgets/invitation.dart';
-// import 'package:jobskeers/Job_Seeker/Pages/More/widgets/AISupport.dart';
+import 'package:jobskeers/CPC_Club/Pages/More/widgets/Wings.dart';
+// import 'package:jobskeers/Job_Seeker/Pages/More/widgets/FagshipEvent.dart';
 // import 'package:jobskeers/Job_Seeker/Pages/More/widgets/AboutUS.dart';
 // import 'package:jobskeers/Job_Seeker/Pages/More/widgets/OtherFrature.dart';
-// import 'package:jobskeers/Job_Seeker/Pages/More/widgets/invitation.dart';
+// import 'package:jobskeers/Job_Seeker/Pages/More/widgets/Wings.dart';
 
 import '../Home Page/Widgets/Hiring_category.dart';
 import '../Home Page/Widgets/Main_feature.dart';
@@ -29,24 +29,7 @@ class _MoreFeatureState extends State<MoreFeature> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            //Profile Management
-            // Container(
-            //   alignment: Alignment.centerLeft,
-            //   margin: EdgeInsets.symmetric(
-            //     vertical: 15,
-            //     horizontal: 20,
-            //   ),
-            //   child: Text(
-            //     "Profile Management",
-            //     style: TextStyle(
-            //       color: Color(0xff03438C),
-            //       fontWeight: FontWeight.bold,
-            //       fontSize: 20,
-            //     ),
-            //   ),
-            // ),
-
-            //Main feature Container
+            //Wings
             Container(
               alignment: Alignment.centerLeft,
               margin: EdgeInsets.symmetric(
@@ -54,7 +37,7 @@ class _MoreFeatureState extends State<MoreFeature> {
                 horizontal: 20,
               ),
               child: Text(
-                "Main Featuers",
+                "Wings",
                 style: TextStyle(
                   color: Color(0xff03438C),
                   fontWeight: FontWeight.bold,
@@ -62,10 +45,10 @@ class _MoreFeatureState extends State<MoreFeature> {
                 ),
               ),
             ),
-            Mian_Feature(),
+            WingsList(),
             Divider(color: Colors.grey,thickness: 1,),
 
-            //Hiring Category
+            //Flagship Event
             Container(
               alignment: Alignment.centerLeft,
               margin: EdgeInsets.symmetric(
@@ -73,7 +56,7 @@ class _MoreFeatureState extends State<MoreFeature> {
                 horizontal: 20,
               ),
               child: Text(
-                "Hiring Category",
+                "Flagship Event",
                 style: TextStyle(
                   color: Color(0xff03438C),
                   fontWeight: FontWeight.bold,
@@ -81,45 +64,7 @@ class _MoreFeatureState extends State<MoreFeature> {
                 ),
               ),
             ),
-            HiringCategory(),
-            Divider(color: Colors.grey,thickness: 1,),
-
-            //Invaitaion
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.symmetric(
-                vertical: 15,
-                horizontal: 20,
-              ),
-              child: Text(
-                "Invitaion",
-                style: TextStyle(
-                  color: Color(0xff03438C),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-            Invitation(),
-            Divider(color: Colors.grey,thickness: 1,),
-
-            //AI Support
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.symmetric(
-                vertical: 15,
-                horizontal: 20,
-              ),
-              child: Text(
-                "AI Support",
-                style: TextStyle(
-                  color: Color(0xff03438C),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-            AI_Support(),
+            FlegshipEventList(),
             Divider(color: Colors.grey,thickness: 1,),
 
             //Other Features
@@ -158,7 +103,6 @@ class _MoreFeatureState extends State<MoreFeature> {
               ),
             ),
             AboutUsCategory(),
-
 
 
           ],
