@@ -8,32 +8,60 @@ import 'Course_widget.dart';
 class UpComingCourse extends StatelessWidget {
   UpComingCourse({super.key});
 
-  final String imagePath = "assets/Images2/Upcoming Course.jpg";
-  final String title = "Ms Excel Course ";
-  final String courseConductLocation = "Online";
-  final String SessionStarting = "9-22 January 2024 (6th session)";
+  final List<Map<String, dynamic>> enrolledCourses = [
+    {
+      'imageUrl': 'https://scontent.fdac135-1.fna.fbcdn.net/v/t39.30808-6/441059255_853553206812289_8190857365242765565_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGZS3TY6bpeACIDWSieV8gY-1d10G6nHpb7V3XQbqcelsewsjZyfpZb9G2tPiycOGJWfXALXT3ZgrOvdWHF30gS&_nc_ohc=bV5vpxlDEmMQ7kNvgGeqElI&_nc_ht=scontent.fdac135-1.fna&oh=00_AYDsxCDlQV-S4RBI3nfsedUgdcCa-CzANzqbK10Eduf8Aw&oe=6657328A',
+      'eventName': 'Enrolled Course 1',
+      'registrationEndDate': '10-05-2024',
+      'classStartDate': '01-06-2024',
+    },
+    {
+      'imageUrl': 'https://scontent.fdac135-1.fna.fbcdn.net/v/t39.30808-6/441059255_853553206812289_8190857365242765565_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGZS3TY6bpeACIDWSieV8gY-1d10G6nHpb7V3XQbqcelsewsjZyfpZb9G2tPiycOGJWfXALXT3ZgrOvdWHF30gS&_nc_ohc=bV5vpxlDEmMQ7kNvgGeqElI&_nc_ht=scontent.fdac135-1.fna&oh=00_AYDsxCDlQV-S4RBI3nfsedUgdcCa-CzANzqbK10Eduf8Aw&oe=6657328A',
+      'eventName': 'Enrolled Course 2',
+      'registrationEndDate': '10-05-2024',
+      'classStartDate': '01-06-2024',
+    },
+    // Add more enrolled courses here
+  ];
 
-
-  final String SugImagePath = "assets/Images2/Upcoming Course.jpg";
-  final String Sugtitle = "Ms Excel Course ";
-  final String SugcourseConductLocation = "Online";
-  final String SugSessionStarting = "9-22 January 2024 (6th session)";
-
-
+  final List<Map<String, dynamic>> unenrolledCourses = [
+    {
+      'imageUrl': 'https://scontent.fdac135-1.fna.fbcdn.net/v/t39.30808-6/441059255_853553206812289_8190857365242765565_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGZS3TY6bpeACIDWSieV8gY-1d10G6nHpb7V3XQbqcelsewsjZyfpZb9G2tPiycOGJWfXALXT3ZgrOvdWHF30gS&_nc_ohc=bV5vpxlDEmMQ7kNvgGeqElI&_nc_ht=scontent.fdac135-1.fna&oh=00_AYDsxCDlQV-S4RBI3nfsedUgdcCa-CzANzqbK10Eduf8Aw&oe=6657328A',
+      'eventName': 'Unenrolled Course 1',
+      'registrationEndDate': '10-05-2024',
+      'classStartDate': '01-06-2024',
+    },
+    {
+      'imageUrl': 'https://scontent.fdac135-1.fna.fbcdn.net/v/t39.30808-6/441059255_853553206812289_8190857365242765565_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGZS3TY6bpeACIDWSieV8gY-1d10G6nHpb7V3XQbqcelsewsjZyfpZb9G2tPiycOGJWfXALXT3ZgrOvdWHF30gS&_nc_ohc=bV5vpxlDEmMQ7kNvgGeqElI&_nc_ht=scontent.fdac135-1.fna&oh=00_AYDsxCDlQV-S4RBI3nfsedUgdcCa-CzANzqbK10Eduf8Aw&oe=6657328A',
+      'eventName': 'Unenrolled CourseUnenrolled Course 2',
+      'registrationEndDate': '10-05-2024',
+      'classStartDate': '01-06-2024',
+    },
+    {
+      'imageUrl': 'https://scontent.fdac135-1.fna.fbcdn.net/v/t39.30808-6/441059255_853553206812289_8190857365242765565_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGZS3TY6bpeACIDWSieV8gY-1d10G6nHpb7V3XQbqcelsewsjZyfpZb9G2tPiycOGJWfXALXT3ZgrOvdWHF30gS&_nc_ohc=bV5vpxlDEmMQ7kNvgGeqElI&_nc_ht=scontent.fdac135-1.fna&oh=00_AYDsxCDlQV-S4RBI3nfsedUgdcCa-CzANzqbK10Eduf8Aw&oe=6657328A',
+      'eventName': 'Unenrolled Course 1',
+      'registrationEndDate': '10-05-2024',
+      'classStartDate': '01-06-2024',
+    },
+    {
+      'imageUrl': 'https://scontent.fdac135-1.fna.fbcdn.net/v/t39.30808-6/441059255_853553206812289_8190857365242765565_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGZS3TY6bpeACIDWSieV8gY-1d10G6nHpb7V3XQbqcelsewsjZyfpZb9G2tPiycOGJWfXALXT3ZgrOvdWHF30gS&_nc_ohc=bV5vpxlDEmMQ7kNvgGeqElI&_nc_ht=scontent.fdac135-1.fna&oh=00_AYDsxCDlQV-S4RBI3nfsedUgdcCa-CzANzqbK10Eduf8Aw&oe=6657328A',
+      'eventName': 'Unenrolled Course 2',
+      'registrationEndDate': '10-05-2024',
+      'classStartDate': '01-06-2024',
+    },
+    // Add more unenrolled courses here
+  ];
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-
-
           // Enrolled Bootcamp
           Container(
             alignment: AlignmentDirectional.topStart,
-            padding: const EdgeInsets.only(top: 10.0, left: 20,right: 10,bottom: 10),
+            padding: const EdgeInsets.only(top: 10.0, left: 20, right: 10, bottom: 10),
             child: Text(
               "Enrolled Bootcamp",
               style: TextStyle(
@@ -43,23 +71,23 @@ class UpComingCourse extends StatelessWidget {
               ),
             ),
           ),
-
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: [
-                for(int i=0; i<10;i++)
-
-                  //Enrolled Bootcamp
-                  Stack(
+              children: enrolledCourses.map((course) {
+                return Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Stack(
                     children: [
                       Bootcamp(
-                      imageUrl: 'https://uploads.toph.co/Nb1jDSdfZA3Eksj_iouiyPHorFPfCCp1Jhh-ibpCllo/resize:fill:1400:500:0/gravity:sm/czM6Ly90b3BoLXBsYXRmb3JtLXVwbG9hZHMvaW1hZ2VzLzE2Njg2NzEwMjM4OTkxNDkxODQtNjY0NjUyOTQ1MDU5MzcwNDEzMC1kZmM3Y2RiNWU4ZjBmMTAyOTE2MTBkZTA1M2Q5OGQwZi5qcGc',
-                      eventName: "Take Off Programming Contset Spring 2024",
-                      // registrationEndDate: "10-05-2024",
-                      // ClassStartDate: "01-06-2024",
-                      onTap: () {  },),
-
+                        imageUrl: course['imageUrl'],
+                        eventName: course['eventName'],
+                        registrationEndDate: course['registrationEndDate'],
+                        ClassStartDate: course['classStartDate'],
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => BootcampDescription()));
+                        },
+                      ),
                       Positioned(
                         top: 12,
                         right: -5,
@@ -78,18 +106,16 @@ class UpComingCourse extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ]
-                  )
-              ],
+                    ],
+                  ),
+                );
+              }).toList(),
             ),
           ),
-
-
-
           // All Courses
           Container(
             alignment: AlignmentDirectional.topStart,
-            padding: const EdgeInsets.only(top: 10.0, left: 20,right: 10,bottom: 10),
+            padding: const EdgeInsets.only(top: 10.0, left: 20, right: 10, bottom: 10),
             child: Text(
               "Unenrolled Bootcamp",
               style: TextStyle(
@@ -99,42 +125,28 @@ class UpComingCourse extends StatelessWidget {
               ),
             ),
           ),
-
-          for(int i=0; i<10;i++)
-          Row(
-            children: [
-
-              SizedBox(width: 15,),
-
-              //UnEnrolled Bootcamp
-              Bootcamp(
-                imageUrl: 'https://uploads.toph.co/Nb1jDSdfZA3Eksj_iouiyPHorFPfCCp1Jhh-ibpCllo/resize:fill:1400:500:0/gravity:sm/czM6Ly90b3BoLXBsYXRmb3JtLXVwbG9hZHMvaW1hZ2VzLzE2Njg2NzEwMjM4OTkxNDkxODQtNjY0NjUyOTQ1MDU5MzcwNDEzMC1kZmM3Y2RiNWU4ZjBmMTAyOTE2MTBkZTA1M2Q5OGQwZi5qcGc',
-                eventName: "Take Off Programming Contset Spring 2024",
-                registrationEndDate: "10-05-2024",
-                ClassStartDate: "01-06-2024",
-                onTap: () {  },),
-
-              SizedBox(width: 15,),
-
-              //UnEnrolled Bootcamp
-              Bootcamp(
-                imageUrl: 'https://uploads.toph.co/Nb1jDSdfZA3Eksj_iouiyPHorFPfCCp1Jhh-ibpCllo/resize:fill:1400:500:0/gravity:sm/czM6Ly90b3BoLXBsYXRmb3JtLXVwbG9hZHMvaW1hZ2VzLzE2Njg2NzEwMjM4OTkxNDkxODQtNjY0NjUyOTQ1MDU5MzcwNDEzMC1kZmM3Y2RiNWU4ZjBmMTAyOTE2MTBkZTA1M2Q5OGQwZi5qcGc',
-                eventName: "Take Off Programming Contset Spring 2024",
-                registrationEndDate: "10-05-2024",
-                ClassStartDate: "01-06-2024",
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> BootcampDescription() ));
-                },),
-
-            ],
+          Wrap(
+            alignment: WrapAlignment.start,
+            children: unenrolledCourses.map((course) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width / 2 - 24, // Half of screen width with some padding
+                  child: Bootcamp(
+                    imageUrl: course['imageUrl'],
+                    eventName: course['eventName'],
+                    registrationEndDate: course['registrationEndDate'],
+                    ClassStartDate: course['classStartDate'],
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => BootcampDescription()));
+                    },
+                  ),
+                ),
+              );
+            }).toList(),
           ),
-
-          SizedBox(height: 20,),
-
-
+          SizedBox(height: 20),
         ],
-
-
       ),
     );
   }

@@ -14,7 +14,7 @@ class Bootcamp extends StatelessWidget {
     this.eventName, required
     this.onTap,
     this.registrationEndDate,
-    this.ClassStartDate
+    this.ClassStartDate,
       });
 
   @override
