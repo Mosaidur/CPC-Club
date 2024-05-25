@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Photos extends StatelessWidget {
   final String? imageUrl;
-  final VoidCallback onTap;
-  const Photos({super.key, this.imageUrl, required this.onTap});
+  final VoidCallback? onTap;
+  const Photos({super.key, this.imageUrl, this.onTap});
 
   @override
   Widget build(BuildContext context) {

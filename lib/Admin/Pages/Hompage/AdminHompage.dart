@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Banner Photo Gallery/BannerPhotoGallery.dart';
+import '../Bootcamp and flagshipevent/BootcampAndFlagshipEvent.dart';
 import '../Committee And Alumni Info/CommitteeAndAlumniInformatio.dart';
 import 'Widgets/DecoratedText.dart';
 
@@ -150,7 +151,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
               SizedBox(height: 10,),
               DecoratedText(
                 text:"Bootcamp and FlagshipEvent",
-                Widgets: CommitteeAndAlumniInformatio(),
+                Widgets: BootcampAndFlagshipEvent(),
               ),
 
               SizedBox(height: 10,),

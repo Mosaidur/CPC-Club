@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../../Home Page/Widget 2/popupScreen.dart';
@@ -39,17 +40,20 @@ class ProgramCard extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Row(
             children:[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child:
-                 imageUrl != null
-                    ? Image.network(
-                  imageUrl!,
-                  width: 100.0,
-                  height: 100.0,
-                  fit: BoxFit.cover,
-                )
-                    : Container(),
+              Container(
+                width: MediaQuery.of(context).size.width/2.2,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child:
+                   imageUrl != null
+                      ? Image.network(
+                    imageUrl!,
+                    width: 100.0,
+                    height: 100.0,
+                    fit: BoxFit.fitWidth,
+                  )
+                      : Container(),
+                ),
               ),
               SizedBox(width: 10.0),
               Expanded(
@@ -58,6 +62,9 @@ class ProgramCard extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       Eventname!,
+                      maxLines: 2,
+                      softWrap: true,
+                      overflow: TextOverflow.visible,
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,

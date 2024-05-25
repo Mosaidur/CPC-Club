@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jobskeers/Admin/Pages/Banner%20Photo%20Gallery/widgets/AddBannerAndPhoto.dart';
 import 'package:jobskeers/Admin/Pages/Banner%20Photo%20Gallery/widgets/ViewBannerAndPhoto.dart';
+import 'package:jobskeers/Admin/Pages/Bootcamp%20and%20flagshipevent/widgets/AddBootcampAndFlagshipEvent.dart';
+import 'package:jobskeers/Admin/Pages/Bootcamp%20and%20flagshipevent/widgets/ViewBootcampAndFlagshipEvent.dart';
 
 class BootcampAndFlagshipEvent extends StatefulWidget {
   const BootcampAndFlagshipEvent({super.key});
@@ -34,8 +36,8 @@ class _BootcampAndFlagshipEventState extends State<BootcampAndFlagshipEvent> {
         ),
         body: TabBarView(
           children: [
-            ViewBannerAndPhoto(),
-            AddBannerAndPhoto(),
+            ViewBootcampAndFlagshipEvent(),
+            AddBootcampAndFlagshipEvent(),
           ],
         ),
       ),
