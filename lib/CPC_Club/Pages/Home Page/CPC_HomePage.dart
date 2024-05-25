@@ -7,10 +7,10 @@ import '../../Authentiction Pages/Sign_In.dart';
 import '../../CustomSnackbar.dart';
 import '../Committe/committeDetailsPage.dart';
 import '../Profile/Account Settings/upload_photo.dart';
-import 'Widgets/AdvisorStudentPanel.dart';
-import 'Widgets/BootcampInRow.dart';
+import 'Widgets/In Row files/AdvisorStudentPanel.dart';
+import 'Widgets/In Row files/BootcampInRow.dart';
 import 'Widgets/FlagshipEvent.dart';
-import 'Widgets/FlagshipEventRow.dart';
+import 'Widgets/In Row files/FlagshipEventRow.dart';
 import 'Widgets/HiringCategoryInRow.dart';
 import 'Widgets/HomePageJobList.dart';
 import 'Widgets/ImageSlider.dart';
@@ -18,9 +18,9 @@ import 'Widgets/Main_feature.dart';
 import '../Browse Jobs/BrowseJobsListPage.dart';
 import 'Widgets/ManuDrawer.dart';
 import 'Widgets/PhotosInColumn.dart';
-import 'Widgets/SemeCalenderInRow.dart';
-import 'Widgets/SpecialMessageInRow.dart';
-import 'Widgets/WingsInRow.dart';
+import 'Widgets/In Row files/SemeCalenderInRow.dart';
+import 'Widgets/In Row files/SpecialMessageInRow.dart';
+import 'Widgets/In Row files/WingsInRow.dart';
 
 class JobSeekerHomePage extends StatefulWidget {
   JobSeekerHomePage({Key? key}) : super(key: key);

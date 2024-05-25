@@ -599,47 +599,6 @@ class _BootcampRegistrationState extends State<BootcampRegistration> {
                 ),
                 SizedBox(height: 20),
 
-                // T-shirt Size form field
-                TextFormField(
-                  inputFormatters: [
-                    LengthLimitingTextInputFormatter(5),
-                  ],
-                  autovalidateMode: AutovalidateMode.onUserInteraction,
-                  validator: (text) {
-                    if (text == null || text.isEmpty) {
-                      return "T-shirt Size can't be empty";
-                    }
-                    if (text.length < 1) {
-                      return "Please enter a valid T-shirt Size";
-                    }
-                    if (text.length > 4) {
-                      return "T-shirt Size can't be more than 5";
-                    }
-                  },
-                  onChanged: (text) => setState(() {
-                    tshirtSizeController.text = text;
-                  }),
-                  controller: tshirtSizeController,
-                  enabled: true,
-                  decoration: InputDecoration(
-                    labelText: "T-shirt Size*",
-                    labelStyle: TextStyle(
-                      color: Colors.grey,
-                    ),
-                    filled: true,
-                    fillColor: Colors.grey.shade200,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Color(0xff03438C),
-                        width: 3,
-                        style: BorderStyle.solid,
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 20),
-
                 // Batch form field
                 TextFormField(
                   inputFormatters: [

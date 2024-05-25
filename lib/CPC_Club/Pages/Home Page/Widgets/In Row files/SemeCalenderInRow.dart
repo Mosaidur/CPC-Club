@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'SemesterCalender.dart';
+import '../SemesterCalender.dart';
 
 class SemeCalenderInRow extends StatelessWidget {
   const SemeCalenderInRow({super.key});

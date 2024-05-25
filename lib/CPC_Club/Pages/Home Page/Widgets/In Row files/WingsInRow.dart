@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-import 'Wings.dart';
+import '../../../../ACM/Acm.dart';
+import '../Wings.dart';
 
 class WingsInRow extends StatelessWidget {
   const WingsInRow({super.key});
@@ -24,7 +26,9 @@ class WingsInRow extends StatelessWidget {
               Wing(
                 imageUrl: 'assets/icons/CPC_ACM.png',
                 eventName: "ACM Task Force",
-                onTap: () {  },
+                onTap: () { 
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ACMTskForce()));
+                },
               ),
 
               SizedBox(width: 15,),

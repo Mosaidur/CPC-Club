@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'SpecailMessage.dart';
+import '../SpecailMessage.dart';
 
 class SpecialMessageInRow extends StatelessWidget {
   const SpecialMessageInRow({super.key});

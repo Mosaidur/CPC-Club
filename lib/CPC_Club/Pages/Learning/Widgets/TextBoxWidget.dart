@@ -23,6 +23,7 @@ class TextBoxWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
 
+              title==null? Container():
               // Profile Summary
               Text(
                 title!,

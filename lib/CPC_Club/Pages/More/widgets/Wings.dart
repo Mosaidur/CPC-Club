@@ -135,7 +135,7 @@ class _WingsList extends State<WingsList> {
                       Container(
                         height: 40,
                         width: 40,
-                        child: Image.asset("assets/Images2/Shortlisted Job.png"),
+                        child: Image.asset("assets/icons/CPC_JCIC.png"),
                       ),
                       SizedBox(
                         height: 5,
