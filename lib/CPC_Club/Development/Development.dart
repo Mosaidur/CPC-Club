@@ -5,14 +5,14 @@ import 'package:jobskeers/CPC_Club/Pages/Learning/Widgets/TextBoxWidget.dart';
 import '../Pages/Committe/Widgets/ProfileCard.dart';
 import '../Pages/Flagship Event/Widgets/ProgramCard.dart';
 
-class ACMTskForce extends StatefulWidget {
-  const ACMTskForce({Key? key}) : super(key: key);
+class Development extends StatefulWidget {
+  const Development({Key? key}) : super(key: key);
 
   @override
-  State<ACMTskForce> createState() => _ACMTskForceState();
+  State<Development> createState() => _DevelopmentState();
 }
 
-class _ACMTskForceState extends State<ACMTskForce> {
+class _DevelopmentState extends State<Development> {
   final List<Map<String, String>> committeeList = [
     {
       'name': 'Asif',
@@ -63,7 +63,7 @@ class _ACMTskForceState extends State<ACMTskForce> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ACM Task Force"),
+        title: Text("Development Wings"),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
@@ -216,7 +216,7 @@ class _ACMTskForceState extends State<ACMTskForce> {
                   children: [
 
                     Text(
-                      "About ACM Task Force",
+                      "About Development Wings",
                       style: TextStyle(
                         color: Color(0xff03438C),
                         fontWeight: FontWeight.bold,

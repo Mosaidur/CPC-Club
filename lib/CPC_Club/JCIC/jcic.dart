@@ -1,18 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:jobskeers/CPC_Club/Pages/Learning/Widgets/TextBoxWidget.dart';
 
 import '../Pages/Committe/Widgets/ProfileCard.dart';
 import '../Pages/Flagship Event/Widgets/ProgramCard.dart';
 
-class ACMTskForce extends StatefulWidget {
-  const ACMTskForce({Key? key}) : super(key: key);
+class JCIC extends StatefulWidget {
+  const JCIC({Key? key}) : super(key: key);
 
   @override
-  State<ACMTskForce> createState() => _ACMTskForceState();
+  State<JCIC> createState() => _JCICState();
 }
 
-class _ACMTskForceState extends State<ACMTskForce> {
+class _JCICState extends State<JCIC> {
   final List<Map<String, String>> committeeList = [
     {
       'name': 'Asif',
@@ -63,7 +64,7 @@ class _ACMTskForceState extends State<ACMTskForce> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ACM Task Force"),
+        title: Text("JCIC"),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
@@ -215,12 +216,16 @@ class _ACMTskForceState extends State<ACMTskForce> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
 
-                    Text(
-                      "About ACM Task Force",
-                      style: TextStyle(
-                        color: Color(0xff03438C),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                    Expanded(
+                      child: Text(
+                        "About Job Career and Industry Collaboration",
+                        maxLines: 3,
+                        softWrap: true,
+                        style: TextStyle(
+                          color: Color(0xff03438C),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                     //

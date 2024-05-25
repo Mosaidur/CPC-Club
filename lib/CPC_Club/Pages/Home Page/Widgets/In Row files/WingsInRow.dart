@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:jobskeers/CPC_Club/Development/Development.dart';
+import 'package:jobskeers/CPC_Club/JCIC/jcic.dart';
 
 import '../../../../ACM/Acm.dart';
+import '../../../../Research & Journal/ResearchWings.dart';
 import '../Wings.dart';
 
 class WingsInRow extends StatelessWidget {
@@ -36,7 +39,9 @@ class WingsInRow extends StatelessWidget {
               Wing(
                 imageUrl: 'assets/icons/CPC_Development.png',
                 eventName: "Development Wing",
-                onTap: () {  },
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Development()));
+                },
               ),
 
               SizedBox(width: 15,),
@@ -44,7 +49,9 @@ class WingsInRow extends StatelessWidget {
               Wing(
                 imageUrl: 'assets/icons/CPC_Research.png',
                 eventName: "Research & Journal",
-                onTap: () {  },
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ResearchAndJournal()));
+                },
               ),
 
               SizedBox(width: 15,),
@@ -52,7 +59,9 @@ class WingsInRow extends StatelessWidget {
               Wing(
                 imageUrl: 'assets/icons/CPC_JCIC.png',
                 eventName: "(JCIC) Job Career & Industry Collaboration",
-                onTap: () {  },
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> JCIC()));
+                },
               ),
 
 

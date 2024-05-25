@@ -1,4 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:jobskeers/CPC_Club/Development/Development.dart';
+import 'package:jobskeers/CPC_Club/JCIC/jcic.dart';
+import 'package:jobskeers/CPC_Club/Research%20&%20Journal/ResearchWings.dart';
+
+import '../../../ACM/Acm.dart';
 
 class WingsList extends StatefulWidget {
   const WingsList({super.key});
@@ -25,138 +31,158 @@ class _WingsList extends State<WingsList> {
               children: [
 
                 //ACM Task Force
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        child: Image.asset("assets/icons/CPC_ACM.png"),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "ACM Task ",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ACMTskForce()));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          child: Image.asset("assets/icons/CPC_ACM.png"),
                         ),
-                      ),
-                      Text(
-                        "Force",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                        SizedBox(
+                          height: 5,
                         ),
-                      ),
-                    ],
+                        Text(
+                          "ACM Task ",
+                          style: TextStyle(
+                            color: Color(0xff03438C),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "Force",
+                          style: TextStyle(
+                            color: Color(0xff03438C),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
 
                 //Development
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        child: Image.asset("assets/icons/CPC_Development.png"),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Development",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Development()));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          child: Image.asset("assets/icons/CPC_Development.png"),
                         ),
-                      ),
-                      Text(
-                        "Wing",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                        SizedBox(
+                          height: 5,
                         ),
-                      ),
-                    ],
+                        Text(
+                          "Development",
+                          style: TextStyle(
+                            color: Color(0xff03438C),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "Wing",
+                          style: TextStyle(
+                            color: Color(0xff03438C),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
 
                 //Research & Journal
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        child: Image.asset("assets/icons/CPC_Research.png"),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Research & ",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ResearchAndJournal()));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          child: Image.asset("assets/icons/CPC_Research.png"),
                         ),
-                      ),
-                      Text(
-                        "Journal",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                        SizedBox(
+                          height: 5,
                         ),
-                      ),
-                    ],
+                        Text(
+                          "Research & ",
+                          style: TextStyle(
+                            color: Color(0xff03438C),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "Journal",
+                          style: TextStyle(
+                            color: Color(0xff03438C),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
 
                 //JCIC
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        child: Image.asset("assets/icons/CPC_JCIC.png"),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "JCIC",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> JCIC()));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          child: Image.asset("assets/icons/CPC_JCIC.png"),
                         ),
-                      ),
-                      Text(
-                        " ",
-                        style: TextStyle(
-                          color: Color(0xff03438C),
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                        SizedBox(
+                          height: 5,
                         ),
-                      ),
-                    ],
+                        Text(
+                          "JCIC",
+                          style: TextStyle(
+                            color: Color(0xff03438C),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          " ",
+                          style: TextStyle(
+                            color: Color(0xff03438C),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
 
